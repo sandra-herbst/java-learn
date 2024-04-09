@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Java-learn-app</string>
+    <string name="welcome">Welcome to logicae</string>
+    <string name="tapToStart">Tap to start learning java</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+
+    <!--Registration-->
+    <string name="name">Please type in your name</string>
+    <string name="img">Time to choose a profile picture</string>
+    <string name="col">Now choose a color for your profile color</string>
+    <string name="sub">Lastly, submit your user data to start coding!</string>
+
+    <!--Code Challenge-->
+    <string name="className">challenge.<font color='#6F80AC'>java</font></string>
+    <string name="classDefinitionStart">public class <font color='#6F80AC'>challenge</font> {</string>
+    <string name="BracketEnd">}</string>
+    <string name="runBtn">RUN CODE</string>
+    <string name="methodDefinition">public void <font color='#6F80AC'>onTask()</font> {</string>
+    <string name="CancelTxt">X</string>
+    <string name="errorTxt">Your code compiles indeed (yay!), but doesn\'t match up with the desired output result (nayy..)</string>
+    <string name="emptyInputError">This challenge is not going to program itself, you gotta do something first!</string>
+    <string name="progressTxt"><font color='#6F80AC'>%s</font> / %s</string>
+    <string name="success">Code successfully compiled!</string>
+
+    <!-- Challenge Start-->
+    <string name="challengeCount">You are about to tackle %s challenges!\nAre you ready?</string>
+    <string name="title_start">First challenge is of type: %s</string>
+    <string name="start">Start</string>
+
+    <!-- Challenge End-->
+    <string name="finish">Finish</string>
+    <string name="failCount">You\'ve failed a total of %s times,</string>
+    <string name="coins">earned %s coins</string>
+    <string name="experience">and gained %s of experience!</string>
+
+    <!--Welcome Dialog-->
+    <string name="welcomeMessage">Welcome to logicae. We accompany you on your first steps to become a professional Java programmer. Let´s go! </string>
+    <string name="createProfile">Create your profile</string>
+
+    <!--Code-->
+    <string name="startLearning">Choose a topic to start learning!</string>
+    <string name="java">- JAVA -</string>
+    <string name="lineCount">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</string>
+    <string name="profile">Profile</string>
+    <string name="code">Code</string>
+    <string name="rewards">Rewards</string>
+
+    <string name="cancelChallenge">Do you really want to cancel the challenge?</string>
+
+    <string name="repeatCompletedSubtopic">"You've already completed this subtopic. You will not earn any more coins or experience by repeating it! Do you still wish to continue?"</string>
+    <string name="submit">Submit</string>
+    <string name="finished_subtopics">Finished Categories</string>
+
+    <string name="reward_desc">Buy some rewards with your earned coins\n- Rewards can be bought but don\'t\n have a use yet -</string>
+    <string name="binaryText">0101110101010101010010110100101010010010101010110111010101001010101001010001010111010101010001010001010010100101101010101111011010101000010101110101001111001110</string>
+    <string name="ready_to_start">Ready to Start</string>
+</resources>

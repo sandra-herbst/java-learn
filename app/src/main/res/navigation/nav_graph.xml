@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_profile">
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="de.hdmstuttgart.java_learn_app.ui.nav_profile.ProfileFragment"
+        android:label="fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_welcomeDialogFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_rewards"
+        android:name="de.hdmstuttgart.java_learn_app.ui.nav_rewards.RewardsFragment"
+        android:label="fragment_rewards"
+        tools:layout="@layout/fragment_rewards" />
+    <fragment
+        android:id="@+id/navigation_code"
+        android:name="de.hdmstuttgart.java_learn_app.ui.nav_code.CodeFragment"
+        android:label="fragment_code"
+        tools:layout="@layout/fragment_code" >
+        <action
+            android:id="@+id/action_navigation_code_to_subtopicFragment"
+            app:destination="@id/subtopicFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/welcomeFragment"
+        android:name="de.hdmstuttgart.java_learn_app.ui.registration.WelcomeDialogFragment"
+        android:label="fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </dialog>
+    <fragment
+        android:id="@+id/subtopicFragment"
+        android:name="de.hdmstuttgart.java_learn_app.ui.nav_code.subtopic.SubtopicFragment"
+        android:label="fragment_subtopic"
+        tools:layout="@layout/fragment_subtopic" >
+        <argument
+            android:name="topicId"
+            app:argType="integer" />
+        <argument
+            android:name="titleTransitionName"
+            app:argType="string" />
+        <argument
+            android:name="descTransitionName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_subtopicFragment_to_challenge_graph"
+            app:enterAnim="@transition/slide_in_right"
+            app:exitAnim="@transition/slide_out_left"
+            app:popEnterAnim="@transition/slide_in_left"
+            app:popExitAnim="@transition/slide_out_right"
+            app:destination="@id/challenge_graph" />
+    </fragment>
+    <navigation android:id="@+id/challenge_graph"
+        app:startDestination="@id/challengeStartFragment">
+        <argument
+            android:name="subtopicId"
+            app:argType="integer" />
+        <fragment
+            android:id="@+id/quizChallengeFragment"
+            android:name="de.hdmstuttgart.java_learn_app.ui.challenge.quiz_challenge.QuizChallengeFragment"
+            android:label="fragment_quiz_challenge"
+            tools:layout="@layout/fragment_quiz_challenge">
+            <action
+                android:id="@+id/action_quizChallengeFragment_to_challengeEndFragment"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/quizChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/challengeEndFragment" />
+            <action
+                android:id="@+id/action_quizChallengeFragment_to_navigation_code"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/quizChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/navigation_code" />
+            <action
+                android:id="@+id/action_quizChallengeFragment_self2"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/quizChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/quizChallengeFragment" />
+            <action
+                android:id="@+id/action_quizChallengeFragment_to_codeChallengeFragment"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/quizChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/codeChallengeFragment" />
+            <argument
+                android:name="subtopicId"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/challengeStartFragment"
+            android:name="de.hdmstuttgart.java_learn_app.ui.challenge.ChallengeStartFragment"
+            android:label="fragment_challenge_start"
+            tools:layout="@layout/fragment_challenge_start">
+            <action
+                android:id="@+id/action_challengeStartFragment_to_quizChallengeFragment"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/challengeStartFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/quizChallengeFragment" />
+            <action
+                android:id="@+id/action_challengeStartFragment_to_codeChallengeFragment"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/challengeStartFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/codeChallengeFragment" />
+            <argument
+                android:name="subtopicId"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/challengeEndFragment"
+            android:name="de.hdmstuttgart.java_learn_app.ui.challenge.ChallengeEndFragment"
+            android:label="fragment_challenge_end"
+            tools:layout="@layout/fragment_challenge_end">
+            <action
+                android:id="@+id/action_challengeEndFragment_to_navigation_code"
+                app:popUpTo="@id/challengeEndFragment"
+                app:enterAnim="@transition/fade_in"
+                app:exitAnim="@transition/fade_out"
+                app:popEnterAnim="@transition/fade_in"
+                app:popExitAnim="@transition/fade_out"
+                app:popUpToInclusive="true"
+                app:destination="@id/navigation_code" />
+            <argument
+                android:name="subtopicId"
+                app:argType="integer" />
+        </fragment>
+        <fragment
+            android:id="@+id/codeChallengeFragment"
+            android:name="de.hdmstuttgart.java_learn_app.ui.challenge.code_challenge.CodeChallengeFragment"
+            android:label="fragment_code_challenge"
+            tools:layout="@layout/fragment_code_challenge">
+            <action
+                android:id="@+id/action_codeChallengeFragment_to_challengeEndFragment"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/codeChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/challengeEndFragment" />
+            <action
+                android:id="@+id/action_codeChallengeFragment_to_navigation_code"
+                app:popUpTo="@id/codeChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/navigation_code" />
+            <action
+                android:id="@+id/action_codeChallengeFragment_self"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/codeChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/codeChallengeFragment" />
+            <action
+                android:id="@+id/action_codeChallengeFragment_to_quizChallengeFragment"
+                app:enterAnim="@transition/slide_in_right"
+                app:exitAnim="@transition/slide_out_left"
+                app:popEnterAnim="@transition/slide_in_left"
+                app:popExitAnim="@transition/slide_out_right"
+                app:popUpTo="@id/codeChallengeFragment"
+                app:popUpToInclusive="true"
+                app:destination="@id/quizChallengeFragment" />
+            <argument
+                android:name="subtopicId"
+                app:argType="integer" />
+        </fragment>
+    </navigation>
+</navigation>

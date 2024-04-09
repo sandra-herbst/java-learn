@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+
+    <style name="Theme.Javalearnapp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="backgroundColor">@color/grey_dark2</item>
+        <item name="colorPrimaryDark">@color/grey_dark4</item>
+        <item name="android:navigationBarColor">@color/grey_dark5</item>
+    </style>
+
+    <style name="Widget.BottomNavigation" parent="Widget.Design.BottomNavigationView">
+        <item name="backgroundTint">@color/grey_dark5</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemIconSize">20dp</item>
+        <item name="itemTextAppearanceActive">@style/Widget.BottomNavigation.TextStyle</item>
+        <item name="itemTextAppearanceInactive">@style/Widget.BottomNavigation.TextStyle</item>
+    </style>
+
+    <style name="Widget.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/grey_light</item>
+        <item name="fontFamily">@font/aldrin_bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Widget.Checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@drawable/quiz_checkbox</item>
+        <item name="android:layout_width">33dp</item>
+        <item name="android:layout_height">33dp</item>
+    </style>
+
+    <style name="Widget.Progressbar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="trackThickness">20dp</item>
+        <item name="trackCornerRadius">20dp</item>
+        <item name="android:progressTint">@color/blue_400</item>
+        <item name="android:progressBackgroundTint">@color/grey_light2</item>
+    </style>
+
+    <style name="Widget.BottomNavigation.TextStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/aldrin_bold</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="small_DescriptionText" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/grey_light</item>
+        <item name="fontFamily">@font/aldrin_light</item>
+    </style>
+
+    <style name="big_TitleText" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/grey_light</item>
+        <item name="fontFamily">@font/aldrin_bold</item>
+    </style>
+
+    <style name="Widget.SearchView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:textColor">@color/grey_light</item>
+        <item name="android:textColorHint">@color/grey_light</item>
+    </style>
+
+</resources>

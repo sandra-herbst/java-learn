@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="blue_200">#82C8FF</color>
+    <color name="blue_400">#4964C5</color>
+    <color name="blue_700">#273567</color>
+    <color name="blue_console">#303749</color>
+    <color name="bue_console">#5D75B3</color>
+    <color name="red">#D33F55</color>
+
+    <color name="success_green">#739E41</color>
+    <color name="fail_red">#CC5667</color>
+    <color name="finished_section">#3E3D70</color>
+    <color name="exp_orange">#FF9800</color>
+    <color name="blue_light">#40549A</color>
+    <color name="grey_light">#99AAB5</color>
+    <color name="grey_light2">#6A767E</color>
+    <color name="grey_light3">#4E5559</color>
+    <color name="grey_light4">#3C3F45</color>
+    <color name="grey_dark">#2C2F33</color>
+    <color name="grey_dark2">#36393f</color>
+    <color name="grey_dark3">#2f3136</color>
+    <color name="grey_dark4">#1B1C20</color>
+    <color name="grey_dark5">#212227</color>
+    <color name="grey_dark6">#26272C</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
